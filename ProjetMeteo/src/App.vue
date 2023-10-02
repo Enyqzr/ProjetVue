@@ -3,6 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import OnListClik from "./components/OnListClik.vue";
 import CitiesList from "./views/CitiesList.vue";
+import City from "./components/City.vue";
 </script>
 
 <template>
@@ -12,11 +13,17 @@ import CitiesList from "./views/CitiesList.vue";
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
       <OnListClik></OnListClik>
-      <CitiesList></CitiesList>
+<!--      <CitiesList></CitiesList>-->
+
     </div>
   </header>
 
-  <RouterView />
+<main>
+  <router-link to="/villes">vers villes</router-link>
+
+  <router-view></router-view>
+</main>
+
 </template>
 
 <style scoped>
